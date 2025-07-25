@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculApp - Ventas</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .selected-courses-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .selected-courses-table th, .selected-courses-table td {
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+        .selected-courses-table th {
+            background-color: var(--light-bg);
+        }
+        .selected-courses-table input[type="number"] {
+            width: 80px;
+            margin: 0;
+            padding: 5px;
+            text-align: center;
+        }
+        .selected-courses-table .btn-danger {
+            padding: 5px 10px;
+            font-size: 0.9em;
+        }
+
+        /* Estilos para la sección de resultados*/
+        .result-box {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e6f2ff;
+            border: 1px solid #b3d9ff;
+            border-radius: 6px;
+        }
+        .result-box h2 {
+            color: #0056b3;
+            margin-top: 0;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        .result-box p {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .result-box strong {
+            color: var(--heading-color);
+            flex-basis: 50%; 
+            text-align: left;
+        }
+        .result-box span {
+            flex-basis: 45%;
+            text-align: right;
+            font-weight: bold;
+        }
+        .result-box #pvp-display {
+            font-size: 2.8em;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        .back-button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>CalculApp - Ventas</h1>
+        
+        <p id="error-message" class="error-message" style="display: none;"></p>
+
+        <div class="form-group" style="display: flex; gap: 10px; align-items: flex-end;">
+            <div style="flex-grow: 1;">
+                <label for="course-select">Selecciona un Curso para Añadir:</label>
+                <select id="course-select">
+                    <option value="">-- Cargando cursos... --</option>
+                </select>
+            </div>
+            <button id="add-course-to-table" class="btn-primary" style="padding: 10px 15px;">Añadir Curso</button>
+        </div>
+
+        <h3>Cursos Seleccionados:</h3>
+        <table class="selected-courses-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Licencias</th>
+                    <th>Precio de Lista</th>
+                    <th>Subtotal</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="selected-courses-table-body">
+                <tr><td colspan="5">No hay cursos seleccionados.</td></tr>
+            </tbody>
+        </table>
+
+        <div class="result-box">
+            <h2>Resumen del Presupuesto:</h2>
+            <p><strong>Total de Licencias:</strong> <span id="total-licenses-global">0</span></p>
+            <p><strong>Subtotal:</strong> <span id="total-subtotal-global">$0.00</span></p>
+            <p><strong>Descuento Aplicado:</strong> <span id="discount-applied-global">0.00%</span></p>
+            <p><strong>Precio Unitario:</strong> <span id="unit-price-global">$0.00</span></p>
+            <p><strong>Precio de Venta al Público (PVP):</strong> <span id="pvp-display">$0.00</span></p>
+        </div>
+
+        <div class="back-button-container">
+            <button id="back-to-index-button" class="btn-secondary">Volver al Inicio</button>
+        </div>
+    </div>
+
+    <script src="sales.js"></script>
+</body>
+</html>

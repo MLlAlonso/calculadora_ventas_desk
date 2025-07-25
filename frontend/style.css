@@ -1,0 +1,201 @@
+@charset "UTF-8";
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Contenedor principal de la aplicación */
+.container {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: block;
+}
+
+/* Estilos para encabezados */
+h1, h2, h3 {
+  color: #212529;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilos de formulario y controles */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type=text],
+input[type=number],
+input[type=password],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Estilos para botones */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  transition: background-color 0.2s ease-in-out;
+}
+button:hover {
+  opacity: 0.9;
+}
+
+/* Clases de colores para botones */
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-success {
+  background-color: #28a745;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+/* Estilos para tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: #212529;
+}
+
+tr:nth-child(even) {
+  background-color: #f6f6f6;
+}
+
+/* Mensajes de error */
+.error-message {
+  color: #dc3545;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #dc3545;
+  border: 1px solid #dc3545;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* --- Media Queries para Responsive Design --- */
+/* Teléfonos (hasta 767px de ancho) */
+@media (max-width: 767px) {
+  .container {
+    margin: 10px;
+    padding: 15px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  h1, h2, h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  input[type=text],
+  input[type=number],
+  input[type=password],
+  select {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+  button {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+  /* Ajustar los botones de "Editar" y "Eliminar" en tablas */
+  td button {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  /* Ocultar IDs en tablas para ahorrar espacio en pantallas pequeñas */
+  table th:first-child,
+  table td:first-child {
+    display: none;
+  }
+}
+/* Tabletas (768px a 1024px de ancho) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 720px;
+    margin: 20px auto;
+    padding: 25px;
+  }
+}
+/* Estilos específicos para la página de inicio (Link buttons) */
+.home-buttons a {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Media query para los botones de la página de inicio en pantallas pequeñas */
+@media (max-width: 767px) {
+  .home-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-buttons a {
+    width: 90%;
+    margin: 8px 0;
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+}/*# sourceMappingURL=style.css.map */

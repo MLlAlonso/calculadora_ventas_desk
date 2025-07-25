@@ -1,0 +1,32 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Electron build output
+/dist/
+build/
+out/
+release/
+*.asar
+
+# VSCode settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# SASS cache
+frontend/*.css.map
+
+# LowDB database (opcional, si no quieres versionar los datos locales)
+backend/database.json
+
+# Logs
+*.log
+
+# Env files
+.env

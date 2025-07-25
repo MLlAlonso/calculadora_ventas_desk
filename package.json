@@ -1,0 +1,19 @@
+{
+  "name": "calculapp-electron",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build --publish never"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^29.3.0",
+    "electron-builder": "^24.13.0"
+  },
+  "dependencies": {
+  }
+}
