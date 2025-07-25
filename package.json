@@ -1,19 +1,60 @@
 {
   "name": "calculapp-electron",
   "version": "1.0.0",
+  "description": "Una calculadora de ventas para Electron",
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder build --publish never"
+    "package-win": "electron-builder --windows --publish never",
+    "package-mac": "electron-builder --mac --publish never"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "El Hub de Seguridad",
+  "license": "MIT",
   "devDependencies": {
-    "electron": "^29.3.0",
-    "electron-builder": "^24.13.0"
+    "electron": "^22.0.0",
+    "electron-builder": "^24.9.1"
   },
   "dependencies": {
+    "lowdb": "^1.0.0",
+    "express": "^4.17.1",
+    "cors": "^2.8.5",
+    "body-parser": "^1.19.0",
+    "nanoid": "^3.0.0"
+  },
+  "build": {
+    "appId": "com.tudominio.calculapp",
+    "productName": "CalculApp",
+    "copyright": "Copyright © 2025 ${author}",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "backend/**/*",
+      "frontend-simple/**/*",
+      "package.json",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.icns"
+    },
+    "extraResources": [
+      {
+        "from": "backend",
+        "to": "backend",
+        "filter": ["**/*"]
+      },
+      {
+        "from": "frontend",
+        "to": "frontend",
+        "filter": ["**/*"]
+      }
+    ]
   }
 }
