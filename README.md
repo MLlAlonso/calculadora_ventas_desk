@@ -1,6 +1,16 @@
 # CalculApp Electron
 
-CalculApp es una aplicación de escritorio construida con Electron, diseñada para la gestión y cotización de cursos con precios escalonados según la cantidad de licencias. Incluye un backend en Node.js (Express + LowDB) y un frontend moderno y responsivo.
+![Electron](https://img.shields.io/badge/Electron-22.x-47848F?style=for-the-badge&logo=electron&logoColor=white)
+![REST API](https://img.shields.io/badge/REST%20API-Available-009688?style=for-the-badge&logo=api)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
+
+## Descripción
+
+CalculApp es una aplicación de escritorio construida con **Electron**, diseñada para la gestión y cotización de cursos con precios escalonados según la cantidad de licencias. Incluye un backend en **Node.js** (Express + LowDB) y un frontend moderno y responsivo.
 
 ## Características
 
@@ -85,3 +95,7 @@ CalculApp es una aplicación de escritorio construida con Electron, diseñada pa
 
 - **Contraseña de administrador**: Modifica la constante `ADMIN_PASSWORD` en [`frontend/admin.js`](frontend/admin.js).
 - **Rangos de precios**: Edita el array `priceRanges` en [`backend/database.json`](backend/database.json) o mediante la API.
+
+📌 **Desarrollado por Mikkel Llaven Alonso**  
+✉️ [mikkel_03@outlook.com](mailto:mikkel_03@outlook.com)  
+💼 [LinkedIn](https://www.linkedin.com/in/mikkel-llaven-alonso-5893b4280/)
